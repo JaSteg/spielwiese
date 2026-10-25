@@ -1,0 +1,140 @@
+:root {
+  --hintergrund: #f4f5f7;
+  --karte: #ffffff;
+  --text: #1c1e21;
+  --text-leise: #6b7280;
+  --rand: #d9dce1;
+  --akzent: #2563eb;
+  --ergebnis-bg: #f0f4ff;
+  --fehler: #c2410c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --hintergrund: #111317;
+    --karte: #1b1e24;
+    --text: #e8eaed;
+    --text-leise: #9aa0a8;
+    --rand: #343841;
+    --akzent: #6b9bff;
+    --ergebnis-bg: #20283a;
+    --fehler: #fb923c;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: var(--hintergrund);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+.karte {
+  width: 100%;
+  max-width: 420px;
+  background: var(--karte);
+  border: 1px solid var(--rand);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.untertitel {
+  margin: 4px 0 28px;
+  color: var(--text-leise);
+  font-size: 0.95rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 550;
+}
+
+.eingabe {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 52px 12px 14px;
+  font: inherit;
+  font-size: 1.05rem;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--rand);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input:focus {
+  border-color: var(--akzent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--akzent) 20%, transparent);
+}
+
+input.ungueltig {
+  border-color: var(--fehler);
+}
+
+.einheit {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-leise);
+  pointer-events: none;
+}
+
+.hinweis {
+  min-height: 1.4em;
+  margin: -6px 0 10px;
+  color: var(--fehler);
+  font-size: 0.85rem;
+}
+
+.ergebnisse {
+  display: grid;
+  gap: 10px;
+}
+
+.ergebnis {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 16px 18px;
+  background: var(--ergebnis-bg);
+  border-radius: 12px;
+}
+
+.label {
+  color: var(--text-leise);
+  font-size: 0.95rem;
+}
+
+.wert {
+  font-size: 1.35rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  color: var(--akzent);
+}

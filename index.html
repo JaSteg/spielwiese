@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VPE-Rechner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="karte">
+    <header>
+      <h1>VPE-Rechner</h1>
+      <p class="untertitel">Stückpreis aus Packungspreis und Verpackungseinheit berechnen</p>
+    </header>
+
+    <form id="rechner" autocomplete="off" novalidate>
+      <label for="packungspreis">Packungspreis</label>
+      <div class="eingabe">
+        <input id="packungspreis" type="text" inputmode="decimal" placeholder="z. B. 12,99">
+        <span class="einheit">€</span>
+      </div>
+
+      <label for="stueckzahl">Stückzahl pro Packung</label>
+      <div class="eingabe">
+        <input id="stueckzahl" type="text" inputmode="numeric" placeholder="z. B. 250">
+        <span class="einheit">Stk.</span>
+      </div>
+
+      <p id="hinweis" class="hinweis" aria-live="polite"></p>
+    </form>
+
+    <section class="ergebnisse" aria-live="polite">
+      <div class="ergebnis">
+        <span class="label">Stückpreis</span>
+        <span id="stueckpreis" class="wert">–</span>
+      </div>
+      <div class="ergebnis">
+        <span class="label">Preis pro 100 Stück</span>
+        <span id="preis100" class="wert">–</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
