@@ -1,21 +1,15 @@
-# VPE-Rechner
+# Spielwiese
 
-Einfache Web-App zur Berechnung von Stückpreisen aus Verpackungseinheiten (VPE).
-Eingabe: Packungspreis und Stückzahl. Ausgabe: Stückpreis und Preis pro 100 Stück.
+Sammlung kleiner, voneinander unabhängiger Testprojekte. Jedes Projekt liegt in
+einem eigenen Unterordner und hat dort bei Bedarf eine eigene `CLAUDE.md` mit
+projektspezifischen Infos.
 
-## Aufbau
+## Regeln für alle Projekte
 
-- `index.html` – Struktur der Seite
-- `style.css` – Design (schlicht, modern, mit Dark Mode)
-- `script.js` – Berechnung und Eingabeprüfung
-
-Reines HTML, CSS und JavaScript – keine Abhängigkeiten, kein Build-Schritt.
-Die App wird per Doppelklick auf `index.html` im Browser geöffnet und muss
-deshalb ohne Server (über `file://`) funktionieren.
-
-## Regeln
-
-- Sprache: Deutsch – für Oberfläche, Code-Kommentare, Commit-Messages und Antworten.
-- Zahlen im deutschen Format anzeigen (Komma als Dezimaltrenner, €).
-- Keine externen Bibliotheken oder CDNs einbinden.
-- Nach jeder Änderung committen (aussagekräftige Commit-Message auf Deutsch).
+- Sprache: Deutsch – für Oberflächen, Code-Kommentare, Commit-Messages und Antworten.
+- Neue Projekte bekommen einen eigenen Unterordner (kleingeschrieben, Bindestriche,
+  z. B. `vpe-rechner/`) und einen Eintrag in der `README.md`.
+- Projekte nicht untereinander verknüpfen; jedes Projekt muss für sich allein laufen.
+- Nach jeder Änderung committen. Die Commit-Message beginnt mit dem Projektordner,
+  z. B. `vpe-rechner: Rundung verbessert`. Änderungen, die die ganze Spielwiese
+  betreffen, beginnen mit `spielwiese:`.
